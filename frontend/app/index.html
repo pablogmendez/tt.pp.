@@ -27,6 +27,7 @@
     <script src="js/controllers/headerControl.js"></script>
     <script src="js/controllers/estadisticasControl.js"></script>
     <script src="js/controllers/configuracionControl.js"></script>
+    <script src="js/controllers/backgroundControl.js"></script>
     
     <!-- Chart -->    
     <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
@@ -38,8 +39,7 @@
     
 </head>
 
-<body ng-app='navegacion' class="full" >
-
+<body ng-app='navegacion' ng-controller="backgroundControl" ng-class="clase">
     <div ng-controller="HeaderCtrl">
         <div ng-include="templateUrl"></div>
     </div>
