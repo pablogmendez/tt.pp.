@@ -24,7 +24,7 @@ miAppAngular.config( [ '$routeProvider' , function($routeProvider){
     })
     .when('/acercade', {
         templateUrl: 'partials/login/acercade.html',
-        controller: 'inicio'
+        controller: 'loginControl'
     })
     .when('/home', {
         templateUrl: 'partials/dashboard/home.html',

@@ -1,11 +1,24 @@
 var gulp = require('gulp');
 var connect = require('gulp-connect');
-
+var webserver = require('gulp-webserver');
+/*
 gulp.task('webserver', function() {
   connect.server({
-    root: './app',
+    root: 'app',
     livereload: true
   })
+});
+*/
+
+
+gulp.task('serve', function() {
+  gulp.src('app')
+    .pipe(webserver({
+      port:'9090',
+      livereload: true,
+      open: true,
+      fallback: './app/index.html'
+    }));
 });
 
 gulp.task('copy', function() {
@@ -16,4 +29,4 @@ gulp.task('copy', function() {
 
 });
 
-gulp.task('default', ['copy', 'webserver']);
+gulp.task('default', ['serve']);
