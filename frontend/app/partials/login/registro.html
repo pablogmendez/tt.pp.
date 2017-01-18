@@ -1,0 +1,113 @@
+<div class="container registertextformat">        
+	<div ng-show="!usuarioregistrado">
+	  	<div class="col-sm-8 pull-center">    
+			<h1>Unete a Blue Games</h1>
+			<h2>El mejor camino para aprender, disfrutar y divertirse.</h2>
+			<br>
+			<h3><strong>Crear una cuenta personal</strong></h3>
+			<br>
+		</div>
+		
+		<div class="col-sm-12">
+			<form id="formularioRegistro" name="formularioRegistro" ng-submit="validarRegistro()" novalidate>
+				<div class="col-sm-12">
+					<div class="col-sm-1">		
+						<i class="fa fa-user fa-2x" aria-hidden="true"></i>
+					</div>
+					<div class="col-sm-11">
+						<input type="text" class="form-control input-md" placeholder="Nombre y Apellido" aria-describedby="basic-addon1" ng-model="nombre" required>
+						<div class="alert alert-warning" ng-show="formularioRegistro.$submitted && !nombre">
+							El <strong>Nombre y Apellido</strong> no puede estar vacío.
+						</div>
+					</div>	
+				</div>	
+		 		<br><br><br>
+				<div class="col-sm-12">
+					<div class="col-sm-1">		
+						<i class="fa fa-map-marker fa-2x" aria-hidden="true"></i>
+					</div>
+					<div class="col-sm-11">
+						<input type="text" class="form-control input-md" placeholder="Dirección" aria-describedby="basic-addon1" ng-model="direccion" required>
+						<div class="alert alert-warning" ng-show="formularioRegistro.$submitted && !direccion">
+							La <strong>Dirección</strong> no puede estar vacía.
+						</div>
+					</div>	
+				</div>	
+		 		<br><br><br>
+				<div class="col-sm-12">
+					<div class="col-sm-1">		
+						<i class="fa fa-phone fa-2x" aria-hidden="true"></i>
+					</div>
+					<div class="col-sm-11">
+						<input type="text" class="form-control input-md" placeholder="Teléfono" aria-describedby="basic-addon1" ng-model="telefono" required>
+						<div class="alert alert-warning" ng-show="formularioRegistro.$submitted && !telefono">
+							El <strong>Teléfono</strong> no puede estar vacío.
+						</div>
+					</div>	
+				</div>	
+		 		<br><br><br>
+				<div class="col-sm-12">
+					<div class="col-sm-1">		
+						<i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+					</div>
+					<div class="col-sm-11">
+						<input type="email" class="form-control input-md" placeholder="E-mail" aria-describedby="basic-addon1" ng-model="email" required>
+						<div class="alert alert-warning" ng-show="formularioRegistro.$submitted && !email">
+							<strong>E-mail</strong> inválido.
+						</div>
+					</div>	
+				</div>	
+		 		<br><br><br>
+				<div class="col-sm-12">
+					<div class="col-sm-1">		
+						<i class="fa fa-money fa-2x" aria-hidden="true"></i>
+					</div>
+					<div class="col-sm-11">
+						<input type="text" class="form-control input-md" placeholder="ID cuenta premium" aria-describedby="basic-addon1" ng-model="premium">
+					</div>	
+				</div>	
+		 		<br><br><br>
+				<div class="col-sm-12">
+					<div class="col-sm-1">		
+						<i class="fa fa-key fa-2x" aria-hidden="true"></i>
+					</div>
+					<div class="col-sm-11">
+						<input type="text" class="form-control input-md" placeholder="Nombre de usuario" aria-describedby="basic-addon1" ng-model="usuario" required>
+						<div class="alert alert-warning" ng-show="formularioRegistro.$submitted && !usuario">
+							El <strong>Nombre de usuario</strong> no puede estar vacío.
+						</div>
+					</div>	
+				</div>	
+		 		<br><br><br>
+				<div class="col-sm-12">
+					<div class="col-sm-1">		
+						<i class="fa fa-unlock-alt fa-2x" aria-hidden="true"></i>
+					</div>
+					<div class="col-sm-11">
+						<input type="password" class="form-control input-md" placeholder="Contraseña" aria-describedby="basic-addon1" ng-model="password" required>
+						<div class="alert alert-warning" ng-show="formularioRegistro.$submitted && !password">
+							La <strong>Contraseña</strong> no puede estar vacía.
+						</div>
+						<br>
+						<input type="password" class="form-control input-md" placeholder="Re-ingresar Contraseña" aria-describedby="basic-addon1" ng-model="repassword" required>
+						<div class="alert alert-warning" ng-show="formularioRegistro.$submitted && !repassword">
+							La <strong>Contraseña</strong> no puede estar vacía.
+						</div>
+						<div class="alert alert-warning" ng-show="formularioRegistro.$submitted && password != repassword">
+							Las <strong>Contraseñas</strong> ingresadas no coinciden.
+						</div>
+						<br>
+						<input type="submit" class="btn btn-default btn-md" value="Registrar cuenta"></input>
+					</div>	
+				</div>
+			</form>
+		</div>	
+	</div>
+</div>
+<div class="container" ng-show="usuarioregistrado">        
+	<div class="registertextformat">
+		<h1>Usuario registrado con éxito !!!</h1>
+	</div>
+	<br>
+	<button type="btn" class="btn btn-primary btn-lg" ng-click="volver()">Volver</button>
+</div>

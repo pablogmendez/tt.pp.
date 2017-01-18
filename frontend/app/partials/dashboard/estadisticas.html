@@ -1,0 +1,59 @@
+<div class="container">
+
+	<h1 class="registertextformat"><i class="fa fa-bar-chart fa-2x" aria-hidden="true"></i> Estadísticas</h1>
+
+	<div class="col-md-12">
+		
+		<div class="col-md-6">
+			<div class="jumbotron">
+				<canvas id="line" class="chart chart-line" chart-data="data"
+				chart-labels="labels" chart-series="series" chart-options="options"
+				chart-dataset-override="datasetOverride" chart-click="onClick">
+				</canvas>
+			</div>
+		</div>
+
+		<div class="col-md-6">
+			<div class="jumbotron">
+				<canvas id="bar" class="chart chart-bar" chart-data="data_barchart" chart-labels="labels_barchart" chart-series="series_barchart">
+				</canvas>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-12">
+		
+		<div class="col-md-6">
+			<div class="jumbotron">
+				<canvas id="radar" class="chart chart-radar" chart-data="data_radarchart" chart-options="options" chart-labels="labels_radarchart">
+				</canvas> 
+			</div>
+		</div>
+
+		<div class="col-md-6">
+			<div class="jumbotron">
+				<canvas id="doughnut" class="chart chart-doughnut" chart-data="data_doughnutchart" chart-labels="_doughnutchart">
+				</canvas> 
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-12">
+		
+		<div class="col-md-6">
+			<div class="jumbotron">
+				<canvas id="base" class="chart-bubble" chart-data="data_bubblechart" chart-series="series_bubblechart" >
+				</canvas>
+			</div>
+		</div>
+
+		<div class="col-md-6">
+			<div class="jumbotron">
+				<canvas id="base" class="chart-base" chart-type="type_dynamicchart" chart-data="data_dynamicchart" chart-labels="labels_dynamicchart" >
+				</canvas>
+				<button type="btn" class="btn class=btn btn-primary btn-lg" ng-click="toggle()">Toggle</button> 
+			</div>
+		</div>
+	</div>
+
+</div>

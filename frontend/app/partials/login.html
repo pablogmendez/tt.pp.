@@ -1,0 +1,40 @@
+<div class="container center">        
+  <div class="col-sm-6 pull-left logintextformat">    
+    <h1 class="text-left">Mi mundo azul</h1>
+    <br>
+    <h2 class="text-left"><i>Hay veces que el azul es brillante como el mar en un día de verano, y otras veces, ese azul oscurece y se disipa como un mar de tempestad.</i></h2>
+    <h4 class="text-right">- TGD PADRES TEA </h4>
+  </div>
+  <br>
+  <br>
+  <div class="col-sm-5 pull-right">
+    <form id="formularioLogin" name="formularioLogin" ng-submit="validarLogin()" novalidate>
+	   <input type="text" class="form-control input-lg" placeholder="Usuario" aria-describedby="basic-addon1" ng-model="usuario" required>
+     <div class="alert alert-warning" ng-show="formularioLogin.$submitted && !usuario">
+        El <strong>Usuario</strong> no puede estar vacío.
+     </div>
+     <div class="alert alert-warning" ng-show="formularioLogin.$submitted && !usuarioOk">
+        El <strong>Usuario</strong> es invalido.
+     </div>
+		 <br>
+     <input type="password" class="form-control input-lg" placeholder="Contraseña" aria-describedby="basic-addon1" ng-model="password" required>
+      <div class="alert alert-warning" ng-show="formularioLogin.$submitted && !password">
+        La <strong>Contraseña</strong> no puede estar vacía.
+     </div>
+     <div class="alert alert-warning" ng-show="formularioLogin.$submitted && !passwordOk">
+        La <strong>Contraseña</strong> es invalida.
+     </div>
+     <br><br><br>
+     <input type="submit" class="btn btn-default btn-lg" value="Ingresar"></input>
+     <button type="btn" class="btn class=btn btn-primary btn-lg" ng-click="registrarse()">Registrarse</button>
+    </form>
+    <br><br><br><br>
+  </div>
+</div>
+                
+                
+
+
+                
+                
+
