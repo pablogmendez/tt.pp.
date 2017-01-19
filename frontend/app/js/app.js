@@ -16,11 +16,11 @@ miAppAngular.config( [ '$routeProvider' , function($routeProvider){
     })
     .when('/contacto', {
         templateUrl: 'partials/login/contacto.html',
-        controller: 'inicio'
+        controller: 'contactoControl'
     })
     .when('/servicios', {
         templateUrl: 'partials/login/servicios.html',
-        controller: 'inicio'
+        controller: 'servicioControl'
     })
     .when('/acercade', {
         templateUrl: 'partials/login/acercade.html',

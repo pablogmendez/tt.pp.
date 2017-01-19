@@ -74,7 +74,24 @@ body {
     font-family: 'Open Sans Condensed', sans-serif;
 }
 
+.contacttextformat {
+    text-align: justify;
+    color: black;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
 .registertextformat {
+    text-align: justify;
+    color: white;
+    display: inline-block;
+    line-height: normal;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.servicetextformat {
     text-align: justify;
     color: white;
     display: inline-block;
@@ -95,10 +112,10 @@ body {
 }
 
 .footer {
-  position: relative;
+  position: absolute;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 60px;
+  height: 50px;
   background-color: #222222;
 }

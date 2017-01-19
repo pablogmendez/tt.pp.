@@ -1,12 +1,48 @@
-<h1>Contacto</h1>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-
-<ul>
-    <li>Lorem ipsum dolor sit amet</li>
-    <li>consectetur adipiscing elit</li>
-    <li>sed do eiusmod tempor incididunt </li>
-</ul>
-
-
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+<div class="container contacttextformat">
+	<div class="col-md-7" ng-show="!preguntaenviada">
+		<h1>Obtenga ayuda con <b>Blue Games</b></h1>
+		<hr  style=" border-width: 1px; border-style: solid; border-color: #000;">
+		<h3><b>Necesita ayuda con Blue Games?</b></h3>
+		<h4>Ha venido al lugar indicado! Envíe un mensaje a nuestro equipo de soporte técnico utilizando el formulario que hay debajo.</h4>
+		<h3><b>Como hacer una buena consulta?</b></h3>
+		<ul>
+			<li><h4>Envíenos información lo más precisa posible.</h4></li>
+			<li><h4>Incluya links a páginas que esten relacionadas con su problema.</h4></li>
+		</ul>
+		<br>
+		<div class="col-sm-12">
+		    <form id="formularioContacto" name="formularioContacto" ng-submit="validarContacto()" novalidate>
+		    	<label><b>Nombre</b></label>
+			   	<input type="text" class="form-control input-lg" aria-describedby="basic-addon1" ng-model="nombre" required>
+		       	<div class="alert alert-warning" ng-show="formularioContacto.$submitted && !nombre">
+		        	El <strong>Nombre</strong> no puede estar vacío.
+		     	</div>
+				<br>
+				<label><b>Email</b></label>
+		    	<input type="email" class="form-control input-lg" aria-describedby="basic-addon1" ng-model="email" required>
+		      	<div class="alert alert-warning" ng-show="formularioLogin.$submitted && !email">
+		        	El <strong>Email</strong> no puede estar vacío.
+		     	</div>
+		     	<br>
+				<label><b>Asunto</b></label>
+		    	<input type="text" class="form-control input-lg" aria-describedby="basic-addon1" ng-model="asunto" required>
+		      	<div class="alert alert-warning" ng-show="formularioContacto.$submitted && !asunto">
+		        	El <strong>Asunto</strong> no puede estar vacío.
+		     	</div>
+		     	<br>
+				<label><b>Como podemos ayudarlo?</b></label>
+				<textarea class="form-control" rows="5" id="comment" placeholder="Por favor escriba aquí su problema." ng-model="comentario"></textarea>
+				<br>
+		     	<input type="submit" class="btn btn-success btn-lg pull-right col-sm-2" value="Enviar"></input>
+		    </form>
+		    <br><br><br><br>
+		</div>
+	</div>
+</div>
+<div class="container" ng-show="preguntaenviada">        
+	<div class="contacttextformat">
+		<h1><b>Consulta enviada con éxito !!!<b></h1>
+	</div>
+	<br>
+	<button type="btn" class="btn btn-success btn-lg" ng-click="volver()">Volver</button>
+</div>
