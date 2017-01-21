@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 var User  = mongoose.model('User');
+var PremiumAccount  = mongoose.model('PremiumAccount');
 
 //GET - Return all registers
 exports.findAll = function(req, res) {
@@ -14,19 +15,31 @@ exports.findAll = function(req, res) {
 exports.add = function(req, res) {
 	console.log('POST');
 	console.log(req.body);
+	User.find({user: req.body.user}, function(err, user) {
+    	if(user[0]) return res.send(503, "Usuario ya registrado");    	
+	});
+
+	if(req.body.premium != "") { // Si el usuario ingresa cuenta premium
+		PremiumAccount.find({user: req.body.user}, function(err, account) {
+			console.log(account);
+			if(account[0] == null) return res.send(501, "El usuario no posee cuenta premium.");
+			if(account[0].premiumId != req.body.premium) return res.send(502, "Clave de cuenta premium no coincide con la registrada.");
+		});		
+	}
 	var user = new User({
 		  name: 		req.body.name,
 		  addres: 		req.body.address,
 		  telnumber: 	req.body.telnumber,
 		  email: 		req.body.email,
-		  dateofbirth: 	req.body.date,
+		  dateofbirth: 	Date(req.body.date),
 		  user: 		req.body.user,
 		  password: 	req.body.password,
 		  premium: 		req.body.premium,
 	});
+
 	user.save(function(err, user) {
-		if(err) return res.send(500, err.message);
-    	res.status(200).jsonp(user);
+	 	if(err) return res.send(500, err.message);
+     	res.status(200).jsonp(user);
 	});
 };
 

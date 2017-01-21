@@ -22,17 +22,11 @@ app.use(methodOverride());
 app.use(require('./middleware/cors'));
 
 // Import Models and Controllers
+var premiumAccount     = require('./models/premiumAccount');
+var premiumAccountCtrl = require('./controllers/premiumAccount');
+
 var user     = require('./models/user');
 var userCtrl = require('./controllers/user');
-
-var router = express.Router();
-
-// Index - Route
-router.get('/', function(req, res) {  
-   res.send("Hola Mundo - www.programacion.com.py");
-});
-
-app.use(router);
 
 // API routes
 var api = express.Router();
@@ -43,6 +37,9 @@ api.route('/user')
 
 api.route('/user/:id')  
   .get(userCtrl.findById);
+
+api.route('/premiumaccount/:id')  
+  .get(premiumAccountCtrl.findById);
 
 app.use(api);  
 

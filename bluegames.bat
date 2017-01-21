@@ -18,6 +18,12 @@ if %comando% == start (
 	echo "Blue Games iniciado"
 	pause
 ) else if %comando% == stop (
+	rem Flasheo las variables
+	set PID=
+	set PID2=
+	set PID3=
+	set PID5=
+
 	taskkill /f /im node.exe
 	taskkill /f /im mongod.exe
 	
