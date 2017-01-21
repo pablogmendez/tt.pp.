@@ -2,5 +2,5 @@
 set comentario=%1
 
 git add *
-git commit -m "%comentario%"
-git push origin master
+git commit -m "test"
+rem git push origin master
