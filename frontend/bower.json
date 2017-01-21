@@ -18,7 +18,8 @@
     "angular": "^1.6.1",
     "angular-route": "^1.6.1",
     "bootstrap": "^3.3.7",
-    "lumx": "^1.4.0"
+    "lumx": "^1.4.0",
+    "animate.css": "^3.5.2"
   },
   "devDependencies": {
     "angular": "^1.6.1",
