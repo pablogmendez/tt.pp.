@@ -1,4 +1,3 @@
-@echo off
 
 set comentario=%1
 
