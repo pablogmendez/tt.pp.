@@ -19,17 +19,17 @@ if %comando% == start (
 	pause
 ) else if %comando% == stop (
 	rem Flasheo las variables
-	set PID=
-	set PID2=
-	set PID3=
-	set PID5=
+	set PID=""
+	set PID2=""
+	set PID3=""
+	set PID5=""
 
 	taskkill /f /im node.exe
 	taskkill /f /im mongod.exe
 	
 	wmic process get parentprocessid,name|find "WMIC" > temp.txt
-	set /p PID=<temp.txt
-	
+	set PID=<temp.txt
+
 	set PID2=%PID: =%
 	set PID5=%PID2:.=%
 	set PID3=%PID5:~-4,4%
