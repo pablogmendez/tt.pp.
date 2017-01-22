@@ -57,6 +57,11 @@ body {
     -o-background-size: cover;
 }
 
+.full_app {
+    background: url('../img/background-app.jpg') center center;
+    
+}
+
 .vcenter {
   display: inline-block;
   vertical-align: middle;
@@ -106,6 +111,14 @@ body {
     font-family: 'Open Sans Condensed', sans-serif;
 }
 
+.apptextformat {
+    text-align: justify;
+    color: #003466;
+    display: inline-block;
+    line-height: normal;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
 .fullsize {
     position: relative;
   height: auto;
@@ -125,4 +138,8 @@ body {
   /* Set the fixed height of the footer here */
   height: 50px;
   background-color: #222222;
+}
+
+.useravatar {
+    margin: 10px 0 10px 0;
 }

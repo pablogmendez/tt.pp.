@@ -1,4 +1,4 @@
-var miAppAngular = angular.module('navegacion', ['ngRoute', 'chart.js'] );
+var miAppAngular = angular.module('navegacion', ['ngRoute', 'chart.js', 'ngAvatar'] );
 
 miAppAngular.config( [ '$routeProvider' , function($routeProvider){
 
@@ -28,7 +28,7 @@ miAppAngular.config( [ '$routeProvider' , function($routeProvider){
     })
     .when('/home', {
         templateUrl: 'partials/dashboard/home.html',
-        controller: 'inicio'
+        controller: 'homeControl'
     })
     .when('/games', {
         templateUrl: 'partials/dashboard/games.html',

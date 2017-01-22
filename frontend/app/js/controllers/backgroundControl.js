@@ -20,7 +20,7 @@ miAppAngular.controller('backgroundControl', function($scope, $location) {
 				$scope.clase = "full_acercade";
 	        } 
 	        else {
-				$scope.clase = "full_login";
+				$scope.clase = "full_app";
 	        }        
     });
 })

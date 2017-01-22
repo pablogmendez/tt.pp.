@@ -1,1 +1,40 @@
-<h1>Error 404: No encontrado</h1>
+<div class="container apptextformat">
+
+	<h1><i class="fa fa-user fa-2x" aria-hidden="true"></i> Inicio</h1>
+	<hr>
+	<div class="row">
+		<div class="col-sm-6 ">
+			<div class="panel panel-primary">
+  				<div class="panel-heading">
+					<h1 class="panel-title" style="font-size: 30px">Datos personales</h1>
+				</div>
+				<div class="panel-body">
+					<img src="img/flat-avatar.png" style="useravatar">
+					<h3>Nombre: 				{{datosUsuario.name}}</h3>
+					<h3>Dirección: 				{{datosUsuario.addres}}</h3>
+					<h3>Email: 					{{datosUsuario.telnumber}}</h3>
+					<h3>Fecha de nacimiento: 	{{datosUsuario.email}}</h3>
+					<h3>Usuario: 				{{datosUsuario.user}}</h3>
+					<h3 ng-show="datosUsuario.premium">Cuenta Premium: SI</h3>
+					<h3 ng-show="!datosUsuario.premium">Cuenta Premium: NO</h3>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div class="panel panel-primary">
+  				<div class="panel-heading">
+					<h1 class="panel-title" style="font-size: 30px">Top 5 Noticias Destacadas</h1>
+				</div>
+				<div class="panel-body">
+					<div class="list-group" style="max-height: 394px; overflow-y:scroll;">
+						<a ng-href="{{new.link}}" class="list-group-item" ng-repeat="new in news">
+						    <h2 class="list-group-item-heading"><b>{{new.titulo}}</b></h2>
+						    <h3 class="list-group-item-text">{{new.copete}}</h3>
+						    <h4 class="list-group-item-text">{{new.cuerpo}}</h4>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

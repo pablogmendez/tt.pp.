@@ -28,6 +28,9 @@ var premiumAccountCtrl = require('./controllers/premiumAccount');
 var user     = require('./models/user');
 var userCtrl = require('./controllers/user');
 
+var news     = require('./models/news');
+var newsCtrl = require('./controllers/news');
+
 // API routes
 var api = express.Router();
 
@@ -40,6 +43,9 @@ api.route('/user/:id')
 
 api.route('/premiumaccount/:id')  
   .get(premiumAccountCtrl.findById);
+
+api.route('/news')  
+  .get(newsCtrl.findAll)
 
 app.use(api);  
 
