@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+	<head>
+    	<script src="phaser.min.js"></script>
+    	<script src="src/boot.js"></script>
+		<script src="src/preload.js"></script>
+		<script src="src/gametitle.js"></script>
+		<script src="src/thegame.js"></script>
+		<script src="src/gameover.js"></script>	
+		<script src="src/levelselect.js"></script>	
+		<script src="src/playlevel.js"></script>	
+		<script src="src/levelone.js"></script>	
+		<script src="src/leveltwo.js"></script>	
+		<script src="src/levelthree.js"></script>	
+		<script src="src/levelfour.js"></script>
+		<script src="src/levelfive.js"></script>
+		<script src="src/levelsix.js"></script>
+		<script src="src/levelseven.js"></script>
+		<script src="src/leveleigth.js"></script>
+		<script src="src/levelnine.js"></script>
+		<script src="src/levelten.js"></script>
+		<script src="src/leveleleven.js"></script>
+		<script src="src/leveltwelve.js"></script>
+		<script src="src/levelthirteen.js"></script>
+		<script src="src/levelfourteen.js"></script>
+		<script src="src/levelfifteen.js"></script>
+		<script src="src/levelsixteen.js"></script>
+		<script src="src/levelseventeen.js"></script>
+		<script src="src/leveleigthteen.js"></script>
+		<script src="src/levelnineteen.js"></script>
+		<script src="src/leveltwenty.js"></script>
+		<script src="src/leveltwentyone.js"></script>
+		<script src="src/leveltwentytwo.js"></script>
+		<script src="src/leveltwentythree.js"></script>
+		<script src="src/leveltwentyfour.js"></script>
+		<script src="src/leveltwentyfive.js"></script>
+    		<style>
+    			body{margin:0}
+    		</style>
+		<script>
+			(function() {
+				var game = new Phaser.Game(320, 480, Phaser.CANVAS, "game");
+				game.global = {
+				thumbRows : 5,
+				// number of thumbnail cololumns
+				thumbCols : 4,
+				// width of a thumbnail, in pixels
+				thumbWidth : 64,
+				// height of a thumbnail, in pixels
+				thumbHeight : 64,
+				// space among thumbnails, in pixels
+				thumbSpacing : 8,
+				// array with finished levels and stars collected.
+				// 0 = playable yet unfinished level
+				// 1, 2, 3 = level finished with 1, 2, 3 stars
+				// 4 = locked
+				starsArray : [0,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+				// level currently playing
+				level : 0,
+				score : 0,
+				alpha : 0.5,
+				timer : 10000
+			}
+				
+				game.state.add("Boot",boot);
+				game.state.add("Preload",preload);
+				game.state.add("GameTitle",gameTitle);
+				game.state.add("TheGame",theGame);
+				game.state.add("LevelSelect",levelSelect);
+				game.state.add("PlayLevel",playLevel);
+				game.state.add("LevelOne",levelone);
+				game.state.add("LevelTwo",leveltwo);
+				game.state.add("LevelThree",levelthree);
+				game.state.add("LevelFour",levelfour);
+				game.state.add("LevelFive",levelfive);
+				game.state.add("LevelSix",levelsix);
+				game.state.add("LevelSeven",levelseven);
+				game.state.add("LevelEigth",leveleigth);
+				game.state.add("LevelNine",levelnine);
+				game.state.add("LevelTen",levelten);
+				game.state.add("LevelEleven",leveleleven);
+				game.state.add("LevelTwelve",leveltwelve);
+				game.state.add("LevelThirteen",levelthirteen);
+				game.state.add("LevelFourteen",levelfourteen);
+				game.state.add("LevelFifteen",levelfifteen);
+				game.state.add("LevelSixteen",levelsixteen);
+				game.state.add("LevelSeventeen",levelseventeen);
+				game.state.add("LevelEigthteen",leveleigthteen);
+				game.state.add("LevelNineteen",levelnineteen);
+				game.state.add("LevelTwenty",leveltwenty);
+				game.state.add("LevelTwentyone",leveltwentyone);
+				game.state.add("LevelTwentytwo",leveltwentytwo);
+				game.state.add("LevelTwentythree",leveltwentythree);
+				game.state.add("LevelTwentyfour",leveltwentyfour);
+				game.state.add("LevelTwentyfive",leveltwentyfive);
+				game.state.add("GameOver",gameOver);
+				game.state.start("Boot");
+			})();    
+		</script>
+    </head>
+    <body>
+    </body>
+</html>
