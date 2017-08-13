@@ -14,13 +14,13 @@ boot.prototype = {
 
 	preload: function(){
 		  //this.game.stage.backgroundColor = '#afeeee';
-          this.game.load.image("loading","assets/loading.png"); 
-          this.game.load.image("loadingText","assets/loadingtext.png"); 
+          this.game.load.image("loading","games/colorama/assets/loading.png"); 
+          this.game.load.image("loadingText","games/colorama/assets/loadingtext.png"); 
 	},
   	create: function(){
 		this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 		this.scale.pageAlignHorizontally = true;
-		this.scale.setScreenSize();
+		//this.scale.setScreenSize();
 		this.game.state.start("Preload");
 	}
 }

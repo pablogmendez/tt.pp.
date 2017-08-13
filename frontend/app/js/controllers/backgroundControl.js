@@ -3,6 +3,7 @@ miAppAngular.controller('backgroundControl', function($scope, $location) {
 
          $scope.$on('$locationChangeSuccess', function(/* EDIT: remove params for jshint */) {
 	        var path = $location.path();
+	        $scope.back = '';
 	        //EDIT: cope with other path
 	        if ( path==='/' || path==='/login') {
 	        	$scope.clase = "full_login";
@@ -21,6 +22,9 @@ miAppAngular.controller('backgroundControl', function($scope, $location) {
 	        } 
 	        else {
 				$scope.clase = "full_app";
+				if ( path==='/colorama') {
+					$scope.back = 'url(img/colorama_fade_thumb.png)';
+				}
 	        }        
-    });
+    	});
 })

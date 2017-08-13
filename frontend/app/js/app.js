@@ -1,4 +1,4 @@
-var miAppAngular = angular.module('navegacion', ['ngRoute', 'chart.js', 'ngAvatar'] );
+var miAppAngular = angular.module('navegacion', ['ngRoute', 'chart.js', 'ngAvatar', 'ui.bootstrap'] );
 
 miAppAngular.config( [ '$routeProvider' , function($routeProvider){
 
@@ -32,7 +32,7 @@ miAppAngular.config( [ '$routeProvider' , function($routeProvider){
     })
     .when('/games', {
         templateUrl: 'partials/dashboard/games.html',
-        controller: 'inicio'
+        controller: 'gamesControl'
     })
     .when('/settings', {
         templateUrl: 'partials/dashboard/settings.html',
@@ -41,6 +41,10 @@ miAppAngular.config( [ '$routeProvider' , function($routeProvider){
     .when('/statistics', {
         templateUrl: 'partials/dashboard/estadisticas.html',
         controller: 'LineCtrl'
+    })
+    .when('/colorama', {
+        templateUrl: 'partials/dashboard/colorama.html',
+        controller: 'coloramaControl'
     })
     .when('/help', {
         templateUrl: 'partials/dashboard/ayuda.html',

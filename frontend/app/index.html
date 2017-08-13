@@ -21,6 +21,8 @@
     <script src="../bower_components/angular-route/angular-route.min.js"></script>
     <script src="../bower_components/angular-animate/angular-animate.min.js"></script>
     <script src="../bower_components/angular-avatar/dist/angular-avatar.min.js"></script>
+    <script src="../bower_components/phaser/phaser.js"></script>
+    <script src="../bower_components/ui-bootstrap/ui-bootstrap-tpls-2.5.0.min.js"></script>
     
     <script src="js/app.js"> </script>
     <script src="js/controllers/inicio.js"></script>
@@ -34,7 +36,10 @@
     <script src="js/controllers/contactoControl.js"></script>
     <script src="js/controllers/servicioControl.js"></script>
     <script src="js/controllers/homeControl.js"></script>
+    <script src="js/controllers/gamesControl.js"></script>
     <script src="js/constants/confConstant.js"></script>
+
+    <script src="js/controllers/coloramaControl.js"></script>
 
     <!-- Chart -->    
     <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
@@ -43,10 +48,23 @@
     <!-- Servicios -->    
     <script src="js/services/userService.js"></script>
 
+        <script src="games/colorama/src/boot.js"></script>
+        <script src="games/colorama/src/preload.js"></script>
+        <script src="games/colorama/src/gametitle.js"></script>
+        <script src="games/colorama/src/thegame.js"></script>
+        <script src="games/colorama/src/gameover.js"></script>  
+        <script src="games/colorama/src/levelselect.js"></script>   
+        <script src="games/colorama/src/playlevel.js"></script> 
+        <script src="games/colorama/src/levelone.js"></script>  
+        <script src="games/colorama/src/leveltwo.js"></script>  
+        <script src="games/colorama/src/levelthree.js"></script>    
+        <script src="games/colorama/src/levelfour.js"></script>
+        <script src="games/colorama/src/levelfive.js"></script>
+
     
 </head>
 
-<body ng-app='navegacion' ng-controller="backgroundControl" ng-class="clase">
+<body ng-app='navegacion' ng-controller="backgroundControl" ng-class="clase" ng-style="{'background-image': back}">
     <div ng-controller="HeaderCtrl">
         <div ng-include="templateUrl"></div>
     </div>

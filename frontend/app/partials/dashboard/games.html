@@ -7,8 +7,8 @@
 	    <div class="thumbnail">
 	      <img src="img/colorama_thumb.png" alt="...">
 	      <div class="caption">
-	        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In libero neque, egestas a viverra id, porta a tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-	        <p><a href="#" class="btn btn-primary" role="button">Jugar</a> <a href="#" class="btn btn-default" role="button">+Info</a></p>
+	        <h3>Recreación digital del clásico juego de mesa para niños. Es una forma divertida y didáctica de introducirlos a los colores y formas que se encuentran en el mundo que los rodea.</h3>
+	        <p><button class="btn btn-primary" role="button" ng-click="play('colorama')">Jugar</button> <button data-toggle="modal" data-target=".coloramaModal" class="btn btn-default" role="button">+Info</button></p>
 	      </div>
 	    </div>
 	  </div>
@@ -16,8 +16,8 @@
 	    <div class="thumbnail">
 	      <img src="img/asociaformas_thumb.png" alt="...">
 	      <div class="caption">
-	         <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In libero neque, egestas a viverra id, porta a tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-	        <p><a href="#" class="btn btn-primary" role="button">Jugar</a> <a href="#" class="btn btn-default" role="button">+Info</a></p>
+	         <h3>Juego en el que se deben asociar elementos de la vida real de acuerdo a algún criterio de afinidad. Ideal para que el niño comience a identificar y familiarizarse con los objetos del mundo que lo rodea.</h3>
+	        <p><a href="#" class="btn btn-primary" role="button">Jugar</a> <button data-toggle="modal" data-target=".asociaformasModal" class="btn btn-default" role="button">+Info</button></p>
 	      </div>
 	    </div>
 	  </div>
@@ -25,8 +25,8 @@
 	    <div class="thumbnail">
 	      <img src="img/completafrases_thumb.png" alt="...">
 	      <div class="caption">
-	         <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In libero neque, egestas a viverra id, porta a tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-	        <p><a href="#" class="btn btn-primary" role="button">Jugar</a> <a href="#" class="btn btn-default" role="button">+Info</a></p>
+	         <h3>En esta aplicación el jugador debe completar una serie de textos con diferents opciones ofrecidas en pantalla; para que luego de finalizado, se realice una lectura rápida de la misma.</h3>
+	        <p><a href="#" class="btn btn-primary" role="button">Jugar</a> <button data-toggle="modal" data-target=".completafrasesModal" class="btn btn-default" role="button">+Info</button></p>
 	      </div>
 	    </div>
 	  </div>
@@ -36,8 +36,8 @@
 	    <div class="thumbnail">
 	      <img src="img/idobjetos_thumb.png" alt="...">
 	      <div class="caption">
-	         <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In libero neque, egestas a viverra id, porta a tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-	        <p><a href="#" class="btn btn-primary" role="button">Jugar</a> <a href="#" class="btn btn-default" role="button">+Info</a></p>
+	         <h3>El juego ofrece una serie de pantallas con objetos de la vida diaria los cuales mediante un requerimiento hablado o escrito deben ser marcados para completar el nivel.</h3>
+	        <p><a href="#" class="btn btn-primary" role="button">Jugar</a> <button data-toggle="modal" data-target=".idobjetosModal" class="btn btn-default" role="button">+Info</button></p>
 	      </div>
 	    </div>
 	  </div>
@@ -45,8 +45,8 @@
 	    <div class="thumbnail">
 	      <img src="img/mueveimagenes_thumb.png" alt="...">
 	      <div class="caption">
-	         <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In libero neque, egestas a viverra id, porta a tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-	        <p><a href="#" class="btn btn-primary" role="button">Jugar</a> <a href="#" class="btn btn-default" role="button">+Info</a></p>
+	         <h3>Juego en el que se muestran diversas imágenes en pantalla a diferentes velocidades con la finalidad de que el jugador seleccione la correcta en base a un pedido explícito.</h3>
+	        <p><a href="#" class="btn btn-primary" role="button">Jugar</a> <button data-toggle="modal" data-target=".mueveimagenesModal" class="btn btn-default" role="button">+Info</button></p>
 	      </div>
 	    </div>
 	  </div>
@@ -54,37 +54,186 @@
 	    <div class="thumbnail">
 	      <img src="img/mundodeemociones_thumb.png" alt="...">
 	      <div class="caption">
-	         <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In libero neque, egestas a viverra id, porta a tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-	        <p><a href="#" class="btn btn-primary" role="button">Jugar</a> <button data-toggle="modal" data-target="#exampleModal" class="btn btn-default" role="button">+Info</button></p>
+	         <h3>Este juego presenta una serie de actividades que tienen por objetivo que el jugador se familiarice con los sentimientos y emociones más comunes que se le presentan en la vida diaria.</h3>
+	        <p><a href="#" class="btn btn-primary" role="button">Jugar</a> <button data-toggle="modal" data-target=".mundodeemocionesModal" class="btn btn-default" role="button">+Info</button></p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	</div>
+</div>
+
+	<div class="modal fade coloramaModal" tabindex="-1" role="dialog" aria-labelledby="coloramaModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="coloramaModalLabel"><b>Formas y Colores</b></h4>
+	      </div>
+	      <div class="modal-body" style=" background-image: url(img/colorama_fade_thumb.png);">
+	          <div class="form-group">
+				<label for="recipient-name" class="control-label"><u>Descripción</u></label>
+				<p>Recreación digital del clásico juego de mesa para niños. Es una forma divertida y didáctica de introducirlos a los colores y formas que se encuentran en el mundo que los rodea.</p>
+				<br>
+				<label for="message-text" class="control-label"><u>Área de entrenamiento</u></label>
+				<p>Percepción visual, concentración y atención: Esta aplicación estimula y entrena el lenguaje receptivo de quien lo juega recibiendo estímulos externos como sonidos o imágenes de manera que pueda escuchar o aceptar con facilidad e interés lo que la misma dice o propone mejorando la percepción visual, la concentración y la atención.</p>
+				<br>
+				<label for="message-text" class="control-label"><u>Instrucciones de juego</u></label>
+				<p>La aplicación propone varias maneras de jugarlo presentándolas en un conjunto de 25 niveles diferentes de dificultad progresiva las cuales van desde el pedido de una pieza en particular hasta en como se colocan las mismas dependiendo del color y la forma.</p>
+				<br>
+				<label for="message-text" class="control-label"><u>Edades recomendadas</u></label>
+				<p>Desde los 3 años en adelante.</p>
+	          </div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
 	      </div>
 	    </div>
 	  </div>
 	</div>
 
-	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="exampleModalLabel">New message</h4>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label for="recipient-name" class="control-label">Recipient:</label>
-            <input type="text" class="form-control" id="recipient-name">
-          </div>
-          <div class="form-group">
-            <label for="message-text" class="control-label">Message:</label>
-            <textarea class="form-control" id="message-text"></textarea>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
+	<div class="modal fade asociaformasModal" tabindex="-1" role="dialog" aria-labelledby="asociaformasModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="asociaformasModalLabel"><b>Asocia Formas</b></h4>
+	      </div>
+	      <div class="modal-body" style=" background-image: url(img/asociaformas_fade_thumb.png);">
+	          <div class="form-group">
+				<label for="recipient-name" class="control-label"><u>Descripción</u></label>
+				<p>Juego en el que se deben asociar elementos de la vida real de acuerdo a algún criterio de afinidad. Ideal para que el niño comience a identificar y familiarizarse con los objetos del mundo que lo rodea.</p>
+				<br>
+				<label for="message-text" class="control-label"><u>Área de entrenamiento</u></label>
+				<p>Percepción visual, concentración y atención: Esta aplicación estimula y entrena el lenguaje receptivo de quien lo juega recibiendo estímulos externos como sonidos o imágenes de manera que pueda escuchar o aceptar con facilidad e interés lo que la misma dice o propone mejorando la percepción visual, la concentración y la atención.</p>
+				<br>
+				<label for="message-text" class="control-label"><u>Instrucciones de juego</u></label>
+				<p>El juego ofrece un total de 15 niveles con actividades de dificultad variada, comenzando con ejercicios sencillos en los cuales; de acuerdo a una consigna determinada, el jugador  deberán asociar los objetos mostrados con otros presentados en pantalla de acuerdo a características en común que los mismos poseen y que el jugador deberá identificar para lograr la asociación correcta.</p>
+				<br>
+				<label for="message-text" class="control-label"><u>Edades recomendadas</u></label>
+				<p>Desde los 3 años en adelante.</p>
+	          </div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+	      </div>
+	    </div>
+	  </div>
+	 </div>
+
+
+	<div class="modal fade completafrasesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="exampleModalLabel"><b>Completa Frases</b></h4>
+	      </div>
+	      <div class="modal-body" style=" background-image: url(img/completafrases_fade_thumb.png);">
+	          <div class="form-group">
+				<label for="recipient-name" class="control-label"><u>Descripción</u></label>
+				<p>En esta aplicación el jugador debe completar una serie de textos con diferents opciones ofrecidas en pantalla; para que luego de finalizado, se realice una lectura rápida de la misma.</p>
+				<br>
+				<label for="message-text" class="control-label"><u>Área de entrenamiento</u></label>
+				<p>Desarrollo del lenguaje: Esta aplicación pretende mejorar y ayudar al proceso cognitivo por el cual los seres humanos, haciendo uso de su competencia lingüística innata,1 aprenden a comunicarse verbalmente usando la lengua natural usada en su entorno social al momento de su nacimiento y durante su infancia hasta la pubertad.</p>
+				<br>
+				<label for="message-text" class="control-label"><u>Instrucciones de juego</u></label>
+				<p>El juego ofrece un total de 15 niveles de dificultad progresiva mediante los cuales al niño se le presentarán textos incompletos y una serie de opciones para completarlos que van desde imágenes, imágenes y palabras ó palabras solas concluyendo en la lectura de la frase por parte de la aplicación al completarla satisfactoriamente.</p>
+				<br>
+				<label for="message-text" class="control-label"><u>Edades recomendadas</u></label>
+				<p>Desde los 5 años en adelante.</p>
+	          </div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade idobjetosModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="exampleModalLabel"><b>Identifica Objetos</b></h4>
+	      </div>
+	      <div class="modal-body" style=" background-image: url(img/idobjetos_fade_thumb.png);">
+	          <div class="form-group">
+				<label for="recipient-name" class="control-label"><u>Descripción</u></label>
+				<p>El juego ofrece una serie de pantallas con objetos de la vida diaria los cuales mediante un requerimiento hablado o escrito deben ser marcados para completar el nivel.</p>
+				<br>
+				<label for="message-text" class="control-label"><u>Área de entrenamiento</u></label>
+				<p>Entrenamiento de la comunicación: Esta aplicación pretende mejorar Las habilidades de comunicación. Esta capacidad se aprende, con práctica, y puede enseñarse. Aunque requieren; al igual que cualquier otra habilidad, la aplicación sistemática y estructurada de una serie de pasos o técnicas en cada una de las distintas fases del proceso.</p>
+				<br>
+				<label for="message-text" class="control-label"><u>Instrucciones de juego</u></label>
+				<p>El juego ofrece un total de 25 niveles de dificultad progresiva mediante los cuales al niño se le presentaran objetos de la vida cotidiana en forma de imágenes que deberá identificar de manera que en un futuro pueda reconocerlas y hablar de ellas en el ámbito de su vida social.</p>
+				<br>
+				<label for="message-text" class="control-label"><u>Edades recomendadas</u></label>
+				<p>Desde los 3 años en adelante.</p>
+	          </div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade mueveimagenesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="exampleModalLabel"><b>Mueve Imagenes</b></h4>
+	      </div>
+	      <div class="modal-body" style=" background-image: url(img/mueveimagenes_fade_thumb.png);">
+	          <div class="form-group">
+				<label for="recipient-name" class="control-label"><u>Descripción</u></label>
+				<p>Juego en el que se muestran diversas imágenes en pantalla a diferentes velocidades con la finalidad de que el jugador seleccione la correcta en base a un pedido explícito.</p>
+				<br>
+				<label for="message-text" class="control-label"><u>Área de entrenamiento</u></label>
+				<p>Psicomotricidad y creatividad: Esta aplicación se ocupa de mejorar y aumentar la memoria y la velocidad mental de quien la juega exigiendo respuestas cada vez más rápidas de manera que los mismos adquieran intuitivamente los aprendizajes necesarios para desarrollarse en un vida diaria.</p>
+				<br>
+				<label for="message-text" class="control-label"><u>Instrucciones de juego</u></label>
+				<p>El juego ofrece un total de 25 niveles agrupados de a 5 en donde se presentan el mismo grupo de imágenes a diferentes velocidades y mediante un pedido escrito en pantalla se debe seleccionar la correcta para poder avanzar de nivel, en caso de error, el conjunto de imágenes se detiene permitiendo un tiempo extendido que permite pensar nuevamente la solución.</p>
+				<br>
+				<label for="message-text" class="control-label"><u>Edades recomendadas</u></label>
+				<p>Desde los 5 años en adelante.</p>
+	          </div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade mundodeemocionesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="exampleModalLabel"><b>Un Mundo de Emociones</b></h4>
+	      </div>
+	      <div class="modal-body" style=" background-image: url(img/mundodeemociones_fade_thumb.png);">
+	          <div class="form-group">
+				<label for="recipient-name" class="control-label"><u>Descripción</u></label>
+				<p>Este juego presenta una serie de actividades que tienen por objetivo que el jugador se familiarice con los sentimientos y emociones más comunes que se le presentan en la vida diaria.</p>
+				<br>
+				<label for="message-text" class="control-label"><u>Área de entrenamiento</u></label>
+				<p>Entrenamiento de la comunicación: Esta aplicación pretende mejorar Las habilidades de comunicación. Esta capacidad se aprende, con práctica, y puede enseñarse. Aunque requieren; al igual que cualquier otra habilidad, la aplicación sistemática y estructurada de una serie de pasos o técnicas en cada una de las distintas fases del proceso.</p>
+				<br>
+				<label for="message-text" class="control-label"><u>Instrucciones de juego</u></label>
+				<p>El juego ofrece un total de 25 niveles de dificultad progresiva en los cuales se presentarán diversas actividades relacionadas con las emociones que sienten los seres humanos ante determinadas situaciones; esto es, amor, odio, felicidad, etc. Y se le pedirá al jugador que interactúe con ellas y las identifique.</p>
+				<br>
+				<label for="message-text" class="control-label"><u>Edades recomendadas</u></label>
+				<p>Desde los 3 años en adelante.</p>
+	          </div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
