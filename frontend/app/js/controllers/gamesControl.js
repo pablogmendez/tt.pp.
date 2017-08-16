@@ -3,6 +3,12 @@ $scope.play = function(juego) {
 	if(juego == 'colorama') {
 		$location.path("/colorama");
 	}
+	else if(juego == 'asociaformas') {
+		$location.path("/asociaformas");
+	}
+	else if(juego == 'completafrases') {
+		$location.path("/completafrases");
+	}
 }
 /*
 var game = new Phaser.Game(800, 600, Phaser.CANVAS, 'phaser-example', { create: create, render: render });

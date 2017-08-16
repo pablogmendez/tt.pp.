@@ -46,6 +46,14 @@ miAppAngular.config( [ '$routeProvider' , function($routeProvider){
         templateUrl: 'partials/dashboard/colorama.html',
         controller: 'coloramaControl'
     })
+    .when('/asociaformas', {
+        templateUrl: 'partials/dashboard/asociaformas.html',
+        controller: 'asociaformasControl'
+    })
+    .when('/completafrases', {
+        templateUrl: 'partials/dashboard/completafrases.html',
+        controller: 'completafrasesControl'
+    })
     .when('/help', {
         templateUrl: 'partials/dashboard/ayuda.html',
         controller: 'inicio'
