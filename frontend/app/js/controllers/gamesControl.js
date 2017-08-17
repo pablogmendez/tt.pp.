@@ -9,6 +9,15 @@ $scope.play = function(juego) {
 	else if(juego == 'completafrases') {
 		$location.path("/completafrases");
 	}
+	else if(juego == 'idobjetos') {
+		$location.path("/idobjetos");
+	}
+	else if(juego == 'mueveimagenes') {
+		$location.path("/mueveimagenes");
+	}
+	else if(juego == 'mundodeemociones') {
+		$location.path("/mundodeemociones");
+	}
 }
 /*
 var game = new Phaser.Game(800, 600, Phaser.CANVAS, 'phaser-example', { create: create, render: render });

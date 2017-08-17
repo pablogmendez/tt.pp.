@@ -25,6 +25,21 @@ miAppAngular.controller('backgroundControl', function($scope, $location) {
 				if ( path==='/colorama') {
 					$scope.back = 'url(img/colorama_fade_thumb.png)';
 				}
+				if ( path==='/asociaformas') {
+					$scope.back = 'url(img/asociaformas_fade_thumb.png)';
+				}
+				if ( path==='/completafrases') {
+					$scope.back = 'url(img/completafrases_fade_thumb.png)';
+				}
+				if ( path==='/idobjetos') {
+					$scope.back = 'url(img/idobjetos_fade_thumb.png)';
+				}
+				if ( path==='/mueveimagenes') {
+					$scope.back = 'url(img/mueveimagenes_fade_thumb.png)';
+				}
+				if ( path==='/mundodeemociones') {
+					$scope.back = 'url(img/mundodeemociones_fade_thumb.png)';
+				}
 	        }        
     	});
 })

@@ -54,6 +54,18 @@ miAppAngular.config( [ '$routeProvider' , function($routeProvider){
         templateUrl: 'partials/dashboard/completafrases.html',
         controller: 'completafrasesControl'
     })
+    .when('/idobjetos', {
+        templateUrl: 'partials/dashboard/idobjetos.html',
+        controller: 'idobjetosControl'
+    })
+    .when('/mueveimagenes', {
+        templateUrl: 'partials/dashboard/mueveimagenes.html',
+        controller: 'mueveimagenesControl'
+    })
+    .when('/mundodeemociones', {
+        templateUrl: 'partials/dashboard/mundodeemociones.html',
+        controller: 'mundodeemocionesControl'
+    })
     .when('/help', {
         templateUrl: 'partials/dashboard/ayuda.html',
         controller: 'inicio'
