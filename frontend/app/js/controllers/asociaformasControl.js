@@ -1,4 +1,4 @@
-miAppAngular.controller('asociaformasControl', function($scope , $location ){
+miAppAngular.controller('asociaformasControl', function($scope , $location, gameService  ){
 
 	var game = new Phaser.Game(320, 480, Phaser.CANVAS, "game");
 	game.global = {
@@ -36,7 +36,8 @@ miAppAngular.controller('asociaformasControl', function($scope , $location ){
 	game.state.add("LevelFive",levelfive_asociaformas);
 	game.state.add("GameOver",gameOver_asociaformas);
 	game.state.start("Boot");
-
+	gameService.game = game;
+	
 $scope.cerrar = function() {
 	game.destroy();
 	$location.path("/games");

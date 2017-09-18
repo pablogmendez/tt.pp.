@@ -1,4 +1,4 @@
-miAppAngular.controller('completafrasesControl', function($scope , $location ){
+miAppAngular.controller('completafrasesControl', function($scope , $location, gameService  ){
 
 				var game = new Phaser.Game(320, 480, Phaser.CANVAS, "game");
 				game.global = {
@@ -56,7 +56,8 @@ miAppAngular.controller('completafrasesControl', function($scope , $location ){
 				game.state.add("LevelTwentyfive",leveltwentyfive_completafrases);
 				game.state.add("GameOver",gameOver_completafrases);
 				game.state.start("Boot");
-
+				gameService.game = game;
+				
 $scope.cerrar = function() {
 	game.destroy();
 	$location.path("/games");

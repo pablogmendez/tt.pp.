@@ -1,4 +1,4 @@
-miAppAngular.controller('mueveimagenesControl', function($scope , $location ){
+miAppAngular.controller('mueveimagenesControl', function($scope , $location, gameService  ){
 
 var game = new Phaser.Game(320, 480, Phaser.CANVAS, "game");
 				game.global = {
@@ -36,6 +36,7 @@ var game = new Phaser.Game(320, 480, Phaser.CANVAS, "game");
 				game.state.add("LevelFive",levelfive_mueveimagenes);
 				game.state.add("GameOver",gameOver_mueveimagenes);
 				game.state.start("Boot");
+				gameService.game = game;
 
 $scope.cerrar = function() {
 	game.destroy();

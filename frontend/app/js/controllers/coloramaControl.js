@@ -1,5 +1,5 @@
-miAppAngular.controller('coloramaControl', function($scope , $location ){
-
+miAppAngular.controller('coloramaControl', function($scope , $location, gameService ){
+	//gameService.game = "colorama";
 	var game = new Phaser.Game(320, 480, Phaser.CANVAS, "game");
 	game.global = {
 		thumbRows : 5,
@@ -36,6 +36,8 @@ miAppAngular.controller('coloramaControl', function($scope , $location ){
 	game.state.add("LevelFive",levelfive_colorama);
 	game.state.add("GameOver",gameOver_colorama);
 	game.state.start("Boot");
+
+	gameService.game = game;
 
 $scope.cerrar = function() {
 	game.destroy();

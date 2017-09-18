@@ -1,4 +1,4 @@
-miAppAngular.controller('idobjetosControl', function($scope , $location ){
+miAppAngular.controller('idobjetosControl', function($scope , $location, gameService  ){
 
 var game = new Phaser.Game(320, 480, Phaser.CANVAS, "game");
 				game.global = {
@@ -35,7 +35,8 @@ var game = new Phaser.Game(320, 480, Phaser.CANVAS, "game");
 				game.state.add("LevelFive",levelfive_idobjetos);
 				game.state.add("GameOver",gameOver_idobjetos);
 				game.state.start("Boot");
-
+				gameService.game = game;
+				
 $scope.cerrar = function() {
 	game.destroy();
 	$location.path("/games");
