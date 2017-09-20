@@ -44,9 +44,18 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="exampleModalLabel"><b ng-if="route == '/home'">Ayuda Inicio</b></h4>
+            <h4 class="modal-title" id="exampleModalLabel"><b ng-if="route == '/home'">Ayuda Inicio</b><b ng-if="route == '/games'">Ayuda Juegos</b><b ng-if="route == '/settings'">Ayuda Configuracion</b><b ng-if="route == '/statistics'">Ayuda Estadisticas</b></h4>
           </div>
           <div ng-if="route == '/home'" class="modal-body" style=" background-image: url(img/ayuda_inicio.png);background-repeat: no-repeat; background-position: center; ">
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          </div>
+          <div ng-if="route == '/games'" class="modal-body" style=" background-image: url(img/ayuda_juegos.png);background-repeat: no-repeat; background-position: center; ">
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          </div>
+            <div ng-if="route == '/settings'" class="modal-body" style=" background-image: url(img/ayuda_conf.png);background-repeat: no-repeat; background-position: center; ">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          </div>
+            <div ng-if="route == '/statistics'" class="modal-body" style=" background-image: url(img/ayuda_conf.png);background-repeat: no-repeat; background-position: center; ">
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
           </div>
           <div class="modal-footer">

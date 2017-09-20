@@ -10,16 +10,64 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <a class="navbar-brand" ><i class="fa fa-puzzle-piece fa-1x" aria-hidden="true"></i> Blue Games</a>
+                <a class="navbar-brand" role="button" data-toggle="modal" data-target=".generalModal"><i class="fa fa-puzzle-piece fa-1x" aria-hidden="true"></i> Blue Games</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav" style="float: right">
+                    <li><a class="navbar-nav pull-right" role="button" data-toggle="modal" data-target=".ayudaModal">Ayuda</a></li>
                     <li><a href="#/games" class="navbar-nav pull-right">Volver</a></li>
-                    <li><a href="#/help" class="navbar-nav pull-right">Ayuda</a></li>
                 </ul>
             
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
+
+    <div class="modal fade ayudaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="exampleModalLabel"><b ng-if="route == '/colorama'">Ayuda Formas y Colores</b><b ng-if="route == '/asociaformas'">Asocia Formas</b><b ng-if="route == '/completafrases'">Ayuda Completa Frases</b><b ng-if="route == '/idobjetos'">Ayuda ID-Objetos</b><b ng-if="route == '/mueveimagenes'">Ayuda Mueve Imagenes</b><b ng-if="route == '/mundodeemociones'">Ayuda Mundo de Emociones</b></h4>
+          </div>
+          <div ng-if="route == '/colorama'" class="modal-body" style=" background-image: url(img/ayuda_colorama.png);background-repeat: no-repeat; background-position: center; ">
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          </div>
+          <div ng-if="route == '/asociaformas'" class="modal-body" style=" background-image: url(img/ayuda_asociaformas.png);background-repeat: no-repeat; background-position: center; ">
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          </div>
+            <div ng-if="route == '/completafrases'" class="modal-body" style=" background-image: url(img/ayuda_completafrases.png);background-repeat: no-repeat; background-position: center; ">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          </div>
+            <div ng-if="route == '/idobjetos'" class="modal-body" style=" background-image: url(img/ayuda_idobjetos.png);background-repeat: no-repeat; background-position: center; ">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          </div>
+            <div ng-if="route == '/mueveimagenes'" class="modal-body" style=" background-image: url(img/ayuda_mueveimagenes.png);background-repeat: no-repeat; background-position: center; ">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          </div>
+            <div ng-if="route == '/mundodeemociones'" class="modal-body" style=" background-image: url(img/ayuda_mundodeemociones.png);background-repeat: no-repeat; background-position: center; ">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+        <div class="modal fade generalModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="exampleModalLabel"><b>Ayuda General</b></h4>
+          </div>
+          <div class="modal-body" style=" background-image: url(img/ayuda_general_juegos.png);background-repeat: no-repeat; background-position: center; ">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
