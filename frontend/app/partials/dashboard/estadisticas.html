@@ -15,6 +15,22 @@
 
 		<div class="col-md-6">
 			<div class="jumbotron">
+				<h4>Características de las partidas del usuario</h4>
+				<br>
+				<div class="btn-group">
+				  	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    	Puntaje total <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+				    	<li ng-click="updateBarChart('score')">&nbsp;&nbsp;&nbsp;Puntaje total</li>
+				    	<li ng-click="updateBarChart('winLevels')">&nbsp;&nbsp;&nbsp;Niveles ganados</li>
+				    	<li ng-click="updateBarChart('loseLevels')">&nbsp;&nbsp;&nbsp;Niveles perdidos</li>
+				    	<li ng-click="updateBarChart('abandonLevels')">&nbsp;&nbsp;&nbsp;Niveles abandonados</li>
+				    	<li ng-click="updateBarChart('time')">&nbsp;&nbsp;&nbsp;Tiempo promedio</li>
+				    	<li ng-click="updateBarChart('stars')">&nbsp;&nbsp;&nbsp;Estrellas promedio</li>
+				  </ul>
+				</div>
+				<hr>
 				<canvas id="bar" class="chart chart-bar" chart-data="data_barchart" chart-labels="labels_barchart" chart-series="series_barchart">
 				</canvas>
 			</div>
@@ -22,17 +38,43 @@
 	</div>
 
 	<div class="col-md-12">
-		
 		<div class="col-md-6">
 			<div class="jumbotron">
-				<canvas id="radar" class="chart chart-radar" chart-data="data_radarchart" chart-options="options" chart-labels="labels_radarchart">
-				</canvas> 
+				<h4>Información sobre las partidas del usuario</h4>
+				<br>
+				<div class="btn-group">
+				  	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    	Partidas totales <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+				    	<li ng-click="updateDinamicChart('all')">&nbsp;&nbsp;&nbsp;Partidas totales</li>
+				    	<li ng-click="updateDinamicChart('started')">&nbsp;&nbsp;&nbsp;Partidas abandonadas</li>
+				    	<li ng-click="updateDinamicChart('finished')">&nbsp;&nbsp;&nbsp;Partidas finalizadas</li>
+				  </ul>
+				</div>
+				<hr>
+				<canvas id="base" class="chart-base" chart-type="type_dynamicchart" chart-data="data_dynamicchart" chart-labels="labels_dynamicchart" >
+				</canvas>
+				<button type="btn" class="btn class=btn btn-primary btn-lg" ng-click="toggle()">Toggle</button> 
 			</div>
 		</div>
 
 		<div class="col-md-6">
 			<div class="jumbotron">
-				<canvas id="doughnut" class="chart chart-doughnut" chart-data="data_doughnutchart" chart-labels="_doughnutchart">
+				<h4>Información sobre las partidas del usuario</h4>
+				<br>
+				<div class="btn-group">
+				  	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    	Partidas totales <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+				    	<li ng-click="updateDoughnutChart('all')">&nbsp;&nbsp;&nbsp;Partidas totales</li>
+				    	<li ng-click="updateDoughnutChart('started')">&nbsp;&nbsp;&nbsp;Partidas abandonadas</li>
+				    	<li ng-click="updateDoughnutChart('finished')">&nbsp;&nbsp;&nbsp;Partidas finalizadas</li>
+				  </ul>
+				</div>
+				<hr>
+				<canvas id="doughnut" class="chart chart-doughnut" chart-data="data_doughnutchart" chart-labels="labels_doughnutchart">
 				</canvas> 
 			</div>
 		</div>
@@ -49,11 +91,25 @@
 
 		<div class="col-md-6">
 			<div class="jumbotron">
-				<canvas id="base" class="chart-base" chart-type="type_dynamicchart" chart-data="data_dynamicchart" chart-labels="labels_dynamicchart" >
+				<h4>Características de las partidas del usuario</h4>
+				<br>
+				<div class="btn-group">
+				  	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    	Puntaje total <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+				    	<li ng-click="updateBarChart('score')">&nbsp;&nbsp;&nbsp;Puntaje total</li>
+				    	<li ng-click="updateBarChart('winLevels')">&nbsp;&nbsp;&nbsp;Niveles ganados</li>
+				    	<li ng-click="updateBarChart('loseLevels')">&nbsp;&nbsp;&nbsp;Niveles perdidos</li>
+				    	<li ng-click="updateBarChart('abandonLevels')">&nbsp;&nbsp;&nbsp;Niveles abandonados</li>
+				    	<li ng-click="updateBarChart('time')">&nbsp;&nbsp;&nbsp;Tiempo promedio</li>
+				    	<li ng-click="updateBarChart('stars')">&nbsp;&nbsp;&nbsp;Estrellas promedio</li>
+				  </ul>
+				</div>
+				<hr>
+				<canvas id="bar" class="chart chart-bar" chart-data="data_barchart" chart-labels="labels_barchart" chart-series="series_barchart">
 				</canvas>
-				<button type="btn" class="btn class=btn btn-primary btn-lg" ng-click="toggle()">Toggle</button> 
 			</div>
 		</div>
 	</div>
-
 </div>

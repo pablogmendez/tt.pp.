@@ -12,7 +12,7 @@ levelone_idobjetos.prototype = {
 		// showing level title
 		var style = {
 			font: "16px Arial",
-			fill: "#ffffff"
+			fill: "#000000"
 		};
 		var levelTitle = this.game.add.text(5,5,"Nivel "+this.game.global.level,style);
 		levelTitle.align = "left";
@@ -112,6 +112,7 @@ levelone_idobjetos.prototype = {
 	},
 
 	levelSelect: function(button) {
+		this.game.global.abandon = true;
 		this.game.state.start("LevelSelect");
 
 		errorScreen = this.game.add.sprite(0,0,"whitescreen");

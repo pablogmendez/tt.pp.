@@ -48,7 +48,7 @@ leveltwo_asociaformas.prototype = {
 		var gameThumb21 = this.game.add.sprite(posX[coord[1]], posY[coord[1]], "comidas_frames");
 		var gameThumb22 = this.game.add.sprite(posX[coord[2]], posY[coord[2]], "comidas_frames");
 		var gameThumb23 = this.game.add.sprite(posX[coord[3]], posY[coord[3]], "comidas_frames");
-
+		
 		if(this.game.global.level == 4) {
 			var gameThumb = this.game.add.sprite(posX[coord[0]] - 50, posY[coord[0]], "comidas_fade");
 			var gameThumb2 = this.game.add.sprite(posX[coord[1]] - 50, posY[coord[1]], "comidas_fade");
@@ -278,6 +278,7 @@ leveltwo_asociaformas.prototype = {
 	},
 
 	levelSelect: function(button) {
+		this.game.global.abandon = true;
 		this.game.state.start("LevelSelect");
 	},
 

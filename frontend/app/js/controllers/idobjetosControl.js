@@ -15,12 +15,26 @@ var game = new Phaser.Game(320, 480, Phaser.CANVAS, "game");
 				// 0 = playable yet unfinished level
 				// 1, 2, 3 = level finished with 1, 2, 3 stars
 				// 4 = locked
-				starsArray : [0,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+				starsArray : [0,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
 				// level currently playing
 				level : 0,
 				score : 0,
 				alpha : 0.5,
-				timer : 10000
+				timer : 10000,
+				abandon : false,
+				startTime : 0,
+				finishTime : 0,
+				stats : {
+					score: 0,
+					winLevels: 0,
+					loseLevels: 0,
+					abandonLevels: 0,
+					time: 0,
+					stars: 0,
+					timestamp: "",
+					status: "",
+					game: "idobjetos"
+				}
 			}
 				
 				game.state.add("Boot",boot_idobjetos);

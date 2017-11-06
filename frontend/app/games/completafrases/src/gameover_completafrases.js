@@ -2,15 +2,33 @@ var gameOver_completafrases = function(game){}
 
 gameOver_completafrases.prototype = {
 	init: function(score){
-		alert("You scored: "+score)
 	},
   	create: function(){
-  		var gameOverTitle = this.game.add.sprite(160,160,"gameover");
-		gameOverTitle.anchor.setTo(0.5,0.5);
-		var playButton = this.game.add.button(160,320,"play",this.playTheGame,this);
-		playButton.anchor.setTo(0.5,0.5);
-	},
-	playTheGame: function(){
-		this.game.state.start("TheGame");
+  		var style = {
+			font: "25px Arial",
+			fill: "#000000"
+		};
+		var style2 = {
+			font: "16px Arial",
+			fill: "#000000"
+		};
+
+		this.game.global.stats.status = "finished";
+		this.game.global.stats.winLevels++;
+		this.game.add.text(10,10,"CompletaFrases terminado!!!",style);
+		this.game.add.text(10,50,"Estadisticas",style2);
+		this.game.add.text(10,60,"------------------",style2);
+		this.game.add.text(10,80,"Puntaje: " + this.game.global.stats.score,style2);
+		this.game.add.text(10,100,"Niveles ganados: " + this.game.global.stats.winLevels,style2);
+		this.game.add.text(10,120,"Niveles perdidos: " + this.game.global.stats.loseLevels,style2);
+		this.game.add.text(10,140,"Niveles abandonados: " + this.game.global.stats.abandonLevels,style2);
+		this.game.add.text(10,160,"Tiempo total jugado: " + this.game.global.stats.time + " segundos",style2);
+		this.game.add.text(10,180,"Estrellas totales: " + this.game.global.stats.stars,style2);
+		this.game.add.text(10,200,"Fecha de juego: " + this.game.global.stats.timestamp,style2);
+		this.game.add.text(10,220,"Estado del juego: " + this.game.global.stats.status,style2);
+
+		this.game.add.text(10,280,"Presione el boton \"Volver\" para regresar",style2);
+		this.game.add.text(10,300,"al menu de juegos ...",style2);
+		console.log(this.game.global.stats);
 	}
 }

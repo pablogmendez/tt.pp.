@@ -108,6 +108,7 @@ levelseven_completafrases.prototype = {
 	},
 
 	levelSelect: function(button) {
+		this.game.global.abandon = true;
 		this.game.state.start("LevelSelect");
 	},
 

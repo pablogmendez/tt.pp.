@@ -137,6 +137,7 @@ levelone_colorama.prototype = {
 	},
 
 	levelSelect: function(button) {
+		this.game.global.abandon = true;
 		this.game.state.start("LevelSelect");
 
 /*		errorScreen = this.game.add.sprite(0,0,"whitescreen");

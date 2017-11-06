@@ -11,10 +11,5 @@ miAppAngular.controller('HeaderCtrl', function($scope, $location, gameService) {
         } else {
 			$scope.templateUrl = 'templates/header4games.html';
         }
-        console.log($scope.route);
-        if(gameService.game != "") {
-			gameService.game.destroy();
-			gameService.game = "";
-        }
     });
 })

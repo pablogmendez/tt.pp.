@@ -31,6 +31,9 @@ var userCtrl = require('./controllers/user');
 var news     = require('./models/news');
 var newsCtrl = require('./controllers/news');
 
+var stat     = require('./models/statistic');
+var statCtrl = require('./controllers/statistic');
+
 // API routes
 var api = express.Router();
 
@@ -40,6 +43,21 @@ api.route('/user')
 
 api.route('/user/:id')  
   .get(userCtrl.findById);
+
+api.route('/stat')  
+  .post(statCtrl.add);
+
+api.route('/stat/:id')  
+  .get(statCtrl.findById);
+
+api.route('/stat/gamescount/:user/:filter')  
+  .get(statCtrl.getPlayedGamesCount);
+
+api.route('/stat/statcount/:user/:filter')  
+  .get(statCtrl.getStatCount);
+
+api.route('/stat/statlist/:user/:filter/:stat')  
+  .get(statCtrl.getStatList);
 
 api.route('/premiumaccount/:id')  
   .get(premiumAccountCtrl.findById);

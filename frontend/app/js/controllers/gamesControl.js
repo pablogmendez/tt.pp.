@@ -1,4 +1,27 @@
-miAppAngular.controller('gamesControl', function($scope , $location ){
+miAppAngular.controller('gamesControl', function($scope , $location, $http, gameService, userService, configuracionGlobal ){
+    if(gameService.game != "") {
+    	console.log("Estadistica obtenida: " + gameService.game.global.stats);
+    	if(gameService.game.global.stats.loseLevels == -1) {
+    		gameService.game.global.stats.loseLevels = 0
+    	}
+		var nuevaStat = {
+			user: 			userService.data.user,
+			stat: 		gameService.game.global.stats,
+		}
+
+		$http.post(configuracionGlobal.api_url + "stat", nuevaStat)
+		.success(function (data) {
+			console.log(data);
+	    })
+	    .error(function (data) {
+		     alert(data);
+	    });
+		
+
+		gameService.game.destroy();
+		gameService.game = "";
+    }
+
 $scope.play = function(juego) {
 	if(juego == 'colorama') {
 		$location.path("/colorama");
@@ -19,23 +42,5 @@ $scope.play = function(juego) {
 		$location.path("/mundodeemociones");
 	}
 }
-/*
-var game = new Phaser.Game(800, 600, Phaser.CANVAS, 'phaser-example', { create: create, render: render });
 
-var circle;
-
-function create() {
-
-    circle = new Phaser.Circle(game.world.centerX, 100,64);
-
-}
-$location.path("/registro")
-function render () {
-
-    game.debug.geom(circle,'#cfffff');
-    game.debug.text('Diameter : '+circle.diameter,50,200);
-    game.debug.text('Circumference : '+circle.circumference(),50,230);
-
-}*/
-//$scope.aasd = "HOLA";
 });

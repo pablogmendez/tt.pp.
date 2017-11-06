@@ -5,14 +5,19 @@ var mongoose = require('mongoose'),
 
 var statisticSchema = new Schema({
   user: 		{type: String},
-  games: 		[{
-  					gameid: 	{type: Number},
-  					day: 		{type: Date},
-  					score: 		{type: Number},
-  					maxlevel: 	{type: Number}
-  }]
+  stat: 		{
+  					score: 	{type: Number},
+  					winLevels: 		{type: Number},
+  					loseLevels: 		{type: Number},
+  					abandonLevels: 	{type: Number},
+  					time: 	{type: Number},
+  					stars: 	{type: Number},
+  					timestamp: 	{type: String},
+  					status: 	{type: String},
+  					game: 	{type: String}
+  				}
 });
 
-statisticSchema.index({ name: 1 });
+statisticSchema.index({ user: 1 });
 
 module.exports = mongoose.model('Statistic', statisticSchema);

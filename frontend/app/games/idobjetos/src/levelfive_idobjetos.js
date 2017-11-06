@@ -12,7 +12,7 @@ levelfive_idobjetos.prototype = {
 		// showing level title
 		var style = {
 			font: "16px Arial",
-			fill: "#ffffff"
+			fill: "#000000"
 		};
 		var levelTitle = this.game.add.text(5,5,"Nivel "+this.game.global.level,style);
 		levelTitle.align = "left";
@@ -113,14 +113,8 @@ levelfive_idobjetos.prototype = {
 	},
 
 	levelSelect: function(button) {
+		this.game.global.abandon = true;
 		this.game.state.start("LevelSelect");
-
-/*		errorScreen = this.game.add.sprite(0,0,"whitescreen");
-		errorScreen.height = this.game.height;
-    	errorScreen.width = this.game.width;
-    	errorScreen.alpha =this.game.global.alpha;
-		leftArrow.inputEnabled = false;
-    	this.game.time.events.add(Phaser.Timer.SECOND * 2, this.fadePicture, this);*/
 	},
 
 	levelFailed: function(button) {
