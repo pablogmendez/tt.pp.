@@ -3,77 +3,36 @@
 	<h1 class="apptextformat"><i class="fa fa-bar-chart fa-2x" aria-hidden="true"></i> Estadísticas</h1>
 
 	<div class="col-md-12">
-		
-		<div class="col-md-6">
-			<div class="jumbotron">
-				<canvas id="line" class="chart chart-line" chart-data="data"
-				chart-labels="labels" chart-series="series" chart-options="options"
-				chart-dataset-override="datasetOverride" chart-click="onClick">
-				</canvas>
+		<div class="jumbotron">
+			<div>
+				<h4>Información sobre atributos de las partidas</h4>
+				<label>Juego: <select ng-model="selectedGame" ng-options="x for x in games"></select></label>
+				<label>&nbsp;&nbsp;Atributo 1: <select ng-model="selectedAttr1" ng-options="x for x in attr"></select></label>
+				<label>&nbsp;&nbsp;Atributo 2: <select ng-model="selectedAttr2" ng-options="x for x in attr"></select></label>
+				<button type="button" class="btn btn-primary" aria-haspopup="true" aria-expanded="false" ng-disabled="!selectedGame || !selectedAttr1 || !selectedAttr2" ng-click="dibujar()">Generar</button>
 			</div>
-		</div>
-
-		<div class="col-md-6">
-			<div class="jumbotron">
-				<h4>Características de las partidas del usuario</h4>
-				<br>
-				<div class="btn-group">
-				  	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				    	Puntaje total <span class="caret"></span>
-					</button>
-					<ul class="dropdown-menu">
-				    	<li ng-click="updateBarChart('score')">&nbsp;&nbsp;&nbsp;Puntaje total</li>
-				    	<li ng-click="updateBarChart('winLevels')">&nbsp;&nbsp;&nbsp;Niveles ganados</li>
-				    	<li ng-click="updateBarChart('loseLevels')">&nbsp;&nbsp;&nbsp;Niveles perdidos</li>
-				    	<li ng-click="updateBarChart('abandonLevels')">&nbsp;&nbsp;&nbsp;Niveles abandonados</li>
-				    	<li ng-click="updateBarChart('time')">&nbsp;&nbsp;&nbsp;Tiempo promedio</li>
-				    	<li ng-click="updateBarChart('stars')">&nbsp;&nbsp;&nbsp;Estrellas promedio</li>
-				  </ul>
-				</div>
-				<hr>
-				<canvas id="bar" class="chart chart-bar" chart-data="data_barchart" chart-labels="labels_barchart" chart-series="series_barchart">
-				</canvas>
-			</div>
+			<hr>
+			<canvas id="line" class="chart chart-line" chart-data="data"
+			chart-labels="labels" chart-series="series" chart-options="options"
+			chart-dataset-override="datasetOverride" chart-click="onClick">
+			</canvas>
 		</div>
 	</div>
 
 	<div class="col-md-12">
-		<div class="col-md-6">
-			<div class="jumbotron">
-				<h4>Información sobre las partidas del usuario</h4>
-				<br>
-				<div class="btn-group">
-				  	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				    	Partidas totales <span class="caret"></span>
-					</button>
-					<ul class="dropdown-menu">
-				    	<li ng-click="updateDinamicChart('all')">&nbsp;&nbsp;&nbsp;Partidas totales</li>
-				    	<li ng-click="updateDinamicChart('started')">&nbsp;&nbsp;&nbsp;Partidas abandonadas</li>
-				    	<li ng-click="updateDinamicChart('finished')">&nbsp;&nbsp;&nbsp;Partidas finalizadas</li>
-				  </ul>
-				</div>
-				<hr>
-				<canvas id="base" class="chart-base" chart-type="type_dynamicchart" chart-data="data_dynamicchart" chart-labels="labels_dynamicchart" >
+		<div class="jumbotron">
+			<h4>Información sobre las partidas del usuario</h4>
+			<br>
+			<label>Patidas: <select ng-model="selectedInstance" ng-options="x for x in partidas"></select></label>
+			<label>Grafico: <select ng-model="selectedGraphic" ng-options="x for x in graphics"></select></label>
+			<button type="button" class="btn btn-primary" aria-haspopup="true" aria-expanded="false" ng-disabled="!selectedInstance || !selectedGraphic" ng-click="retriveInstance()">Generar</button>
+			<hr>
+			<div ng-show="selectedGraphic=='Torta'">
+				<canvas id="base" class="chart-base" chart-type="type_dynamicchart" chart-data="data_doughnutchart" chart-labels="labels_doughnutchart" >
 				</canvas>
 				<button type="btn" class="btn class=btn btn-primary btn-lg" ng-click="toggle()">Toggle</button> 
 			</div>
-		</div>
-
-		<div class="col-md-6">
-			<div class="jumbotron">
-				<h4>Información sobre las partidas del usuario</h4>
-				<br>
-				<div class="btn-group">
-				  	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				    	Partidas totales <span class="caret"></span>
-					</button>
-					<ul class="dropdown-menu">
-				    	<li ng-click="updateDoughnutChart('all')">&nbsp;&nbsp;&nbsp;Partidas totales</li>
-				    	<li ng-click="updateDoughnutChart('started')">&nbsp;&nbsp;&nbsp;Partidas abandonadas</li>
-				    	<li ng-click="updateDoughnutChart('finished')">&nbsp;&nbsp;&nbsp;Partidas finalizadas</li>
-				  </ul>
-				</div>
-				<hr>
+			<div ng-show="selectedGraphic=='Doughnut'">
 				<canvas id="doughnut" class="chart chart-doughnut" chart-data="data_doughnutchart" chart-labels="labels_doughnutchart">
 				</canvas> 
 			</div>
@@ -81,35 +40,14 @@
 	</div>
 
 	<div class="col-md-12">
-		
-		<div class="col-md-6">
-			<div class="jumbotron">
-				<canvas id="base" class="chart-bubble" chart-data="data_bubblechart" chart-series="series_bubblechart" >
-				</canvas>
-			</div>
-		</div>
-
-		<div class="col-md-6">
-			<div class="jumbotron">
-				<h4>Características de las partidas del usuario</h4>
-				<br>
-				<div class="btn-group">
-				  	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				    	Puntaje total <span class="caret"></span>
-					</button>
-					<ul class="dropdown-menu">
-				    	<li ng-click="updateBarChart('score')">&nbsp;&nbsp;&nbsp;Puntaje total</li>
-				    	<li ng-click="updateBarChart('winLevels')">&nbsp;&nbsp;&nbsp;Niveles ganados</li>
-				    	<li ng-click="updateBarChart('loseLevels')">&nbsp;&nbsp;&nbsp;Niveles perdidos</li>
-				    	<li ng-click="updateBarChart('abandonLevels')">&nbsp;&nbsp;&nbsp;Niveles abandonados</li>
-				    	<li ng-click="updateBarChart('time')">&nbsp;&nbsp;&nbsp;Tiempo promedio</li>
-				    	<li ng-click="updateBarChart('stars')">&nbsp;&nbsp;&nbsp;Estrellas promedio</li>
-				  </ul>
-				</div>
-				<hr>
-				<canvas id="bar" class="chart chart-bar" chart-data="data_barchart" chart-labels="labels_barchart" chart-series="series_barchart">
-				</canvas>
-			</div>
+		<div class="jumbotron">
+			<h4>Características de las partidas del usuario</h4>
+			<br>
+			<label>Caracteristica: <select ng-model="selectedChar" ng-options="x for x in caracteristicas"></select></label>
+			<!-- <label>Grafico: <select ng-model="selectedGraphic2" ng-options="x for x in graphics2"></select></label> -->
+			<button type="button" class="btn btn-primary" aria-haspopup="true" aria-expanded="false" ng-disabled="!selectedChar" ng-click="updateBarChart()">Generar</button>
+			<hr>
+				<canvas id="bar" class="chart chart-bar" chart-data="data_barchart" chart-labels="labels_barchart" chart-series="series_barchart"></canvas>
 		</div>
 	</div>
 </div>

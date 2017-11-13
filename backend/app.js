@@ -59,6 +59,9 @@ api.route('/stat/statcount/:user/:filter')
 api.route('/stat/statlist/:user/:filter/:stat')  
   .get(statCtrl.getStatList);
 
+api.route('/stat/gameattr/:user/:game')  
+  .get(statCtrl.getGameAttr);
+
 api.route('/premiumaccount/:id')  
   .get(premiumAccountCtrl.findById);
 

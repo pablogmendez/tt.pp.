@@ -47,6 +47,13 @@ exports.getStatCount = function(req, res) {
 	});
 };
 
+exports.getGameAttr = function(req, res) {
+	Statistic.find({"user":req.params.user, "stat.game":req.params.game}).sort({"stat.timestamp":1}).exec(function(err, statistic) {
+    if(err) return res.send(500, err.message);
+		res.status(200).jsonp(statistic);
+	});
+};
+
 exports.getStatList = function(req, res) {
 	if(req.params.stat == "score") {
 		Statistic.find({"user":req.params.user, "stat.game":req.params.filter}, {"stat.score":1, "stat.timestamp":1,_id:0}, function(err, statistic) {
